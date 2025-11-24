@@ -28,7 +28,6 @@ def train_page():
 
   try:
      data = call_api(api_url, api_key)
-     print(data, flush=True)
      for item in data:
         if item["DIRECTION"] == "E" and item["STATION"] == "INMAN PARK STATION":
             train_list.append(item)
