@@ -18,7 +18,7 @@ const String serverPath = "Your personal server path";
 
 String direction;
 
-// I increased this slightly just in case, but keep an eye on memory usage!
+// Might change this
 const size_t CAPACITY = 1024; 
 
 
@@ -27,7 +27,7 @@ void setup()
     Serial.begin(9600);
     delay(10);
 
-    // --- WiFi Connection Logic ---
+    // Connect to wifi
     Serial.println("\nConnecting to " + String(ssid));
     WiFi.begin(ssid, password);
 
@@ -103,7 +103,7 @@ void loop() {
           } 
         }
         else {
-          // Handle empty JSON array
+          // Empty json
           tft.fillScreen(TFT_BLACK);
           tft.setTextColor(TFT_WHITE, TFT_BLACK);
           tft.setTextSize(2);
@@ -134,7 +134,7 @@ void loop() {
     Serial.println("WiFi Disconnected");
   }
 
-  // Delay before refreshing
+  // Refreshes every 15 seconds, might change this later
   delay(15000); 
 }
 
