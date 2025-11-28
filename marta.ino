@@ -11,10 +11,10 @@ int y_pos = 80;
 int x_center = x_pos - 8;
 int y_center = y_pos - 10;
 
-const char* ssid     = "NETGEAR95"; 
-const char* password = "quietmoon182"; 
+const char* ssid     = "Add Your Wifi Network Name Here"; 
+const char* password = "Add Your Wifi Password Here"; 
 
-const String serverPath = "http://192.168.0.111:5000/train-times"; 
+const String serverPath = "Your personal server path"; 
 
 String direction;
 
