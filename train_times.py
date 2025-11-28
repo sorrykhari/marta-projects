@@ -13,7 +13,7 @@ def call_api(api_url, api_key):
 
 if __name__ == "__main__":
     config = load_config()
-
+    
     api_url = config["rail_url"]
     api_key = config["rail_key"]
 
@@ -21,8 +21,8 @@ if __name__ == "__main__":
         data = call_api(api_url, api_key)
         for item in data:
             if item["DIRECTION"] == "E" and item["STATION"] == "INMAN PARK STATION":
-              print(f"{item["DIRECTION"]}-BOUND {item["LINE"]} ARRIVING IN {item["WAITING_TIME"]}")
+              print(f"EASTBOUND {item["LINE"]} ARRIVING IN {item["WAITING_TIME"]}")
             elif item["DIRECTION"] == "W" and item["STATION"] == "INMAN PARK STATION":
-              print(f"{item["DIRECTION"]}-BOUND {item["LINE"]} ARRIVING IN {item["WAITING_TIME"]}")
+              print(f"WESTBOUND {item["LINE"]} ARRIVING IN {item["WAITING_TIME"]}")
     except Exception as e:
         print("Error calling API:", e)

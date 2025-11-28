@@ -1,0 +1,5 @@
+#ignore configs
+config.json
+example_get.cpp
+marta_venv
+.vscode
